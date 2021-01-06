@@ -1,0 +1,349 @@
+{
+  "title": "com.google.chrome",
+  "description": "Google Chrome Preferences",
+  "properties": {
+    "AuthServerWhitelist": {
+      "title": "HomepageLocation",
+      "description": "Specifies the Homepage Location",
+      "property_order": 5,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "string"
+        }
+      ]
+    },
+    "NewTabPageLocation": {
+      "title": "New Tab Page Location",
+      "description": "Configures the default New Tab page URL and prevents users from changing it",
+      "property_order": 10,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "string"
+        }
+      ]
+    },
+    "DefaultBrowserSettingEnabled": {
+      "title": "Set Google Chrome as Default Browser",
+      "description": "Setting the policy to True has Google Chrome always check whether it's the default browser on startup and, if possible, automatically register itself. Setting the policy to False stops Google Chrome from ever checking if it's the default and turns user controls off for this option.",
+      "property_order": 15,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "boolean"
+        }
+      ]
+    },
+    "DeveloperToolsAvailability": {
+      "title": "Control where Developer Tools can be used",
+      "description": "Setting the policy to 0 (the default) means you can access the developer tools and the JavaScript console, but not in the context of extensions installed by enterprise policy. Setting the policy to 1 means you can access the developer tools and the JavaScript console in all contexts, including that of extensions installed by enterprise policy. Setting the policy to 2 means you can't access developer tools, and you can't inspect website elements",
+      "property_order": 20,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "integer"
+        }
+      ]
+    },
+    "RestoreOnStartupURLs": {
+      "title": "Restore On Startup URLs",
+      "description": "If 'Open a list of URLs' is selected as the startup action, this allows you to specify the list of URLs that are opened. If left not set no URL will be opened on start up",
+      "property_order": 25,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "Entries"
+          }
+        }
+      ]
+    },
+    "AuthNegotiateDelegateWhitelist": {
+      "title": "Authentication - AuthNegotiateDelegateWhitelist",
+      "description": "Servers that Google Chrome may delegate to. Separate multiple server names with commas. Wildcards (*) are allowed",
+      "property_order": 30,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "string"
+        }
+      ]
+    },
+    "DefaultCookiesSetting": {
+      "title": "Content Settings - DefaultCookiesSetting",
+      "description": "Allows you to set whether websites are allowed to set local data. Setting local data can be either allowed for all websites or denied for all websites.",
+      "property_order": 35,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "integer",
+          "options": {
+            "enum_titles": [
+              "Allow all sites to set local data",
+              "Do not allow all sites to set local data",
+              "Keep cookies for the duration of the session"
+            ]
+          },
+          "enum": [
+            1,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    "ShowHomeButton": {
+      "title": "Show Home Button in the bookmarks bar",
+      "description": "Shows the Home button on Google Chrome's toolbar",
+      "property_order": 40,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "boolean"
+        }
+      ]
+    },
+    "BookmarkBarEnabled": {
+      "title": "Enable Bookmark Bar",
+      "description": "Setting the policy to True displays a bookmark bar in Google Chrome. Setting the policy to False means users never see the bookmark bar.",
+      "property_order": 45,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "boolean"
+        }
+      ]
+    },
+    "BrowserGuestModeEnabled": {
+      "title": "BrowserGuestModeEnabled",
+      "description": "If this policy is set to true or not configured, Google Chrome will enable guest logins. Guest logins are Google Chrome profiles where all windows are in incognito mode. If this policy is set to false, Google Chrome will not allow guest profiles to be started.",
+      "property_order": 50,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "boolean"
+        }
+      ]
+    },
+    "RestoreOnStartup": {
+      "title": "Restore Behavior",
+      "description": "Allows you to specify the behavior on startup. 5 = Open New Tab Page 1 = Restore the last session 4 = Open a list of URLs",
+      "property_order": 55,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "integer"
+        }
+      ]
+    },
+    "BrowserSignin": {
+      "title": "Browser Sign in",
+      "description": "Specifies whether users can sign in to Chrome Browser and sync browser information to their Google Account. 0 = Disable browser sign-in 1 = Enable browser sign-in 2 = Force users to sign-in to use the browser",
+      "property_order": 60,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "integer"
+        }
+      ]
+    },
+    "PasswordManagerEnabled": {
+      "title": "Enable saving passwords to the password manager",
+      "description": "Setting the policy to Enabled means users have Google Chrome remember passwords and provide them the next time they sign in to a site.",
+      "property_order": 65,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "boolean"
+        }
+      ]
+    },
+    "RelaunchNotification": {
+      "title": "Relaunch Notification",
+      "description": "Notify users that Google Chrome must be relaunched or Google Chrome OS must be restarted to apply a pending update. 1 = Show a recurring prompt to the user indicating that a relaunch is recommended 2 = Show a recurring prompt to the user indicating that a relaunch is required",
+      "property_order": 70,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "integer"
+        }
+      ]
+    },
+    "RelaunchNotificationPeriod": {
+      "title": "Set the time of the first user relaunch notification.",
+      "description": "Allows you to set the time period, in milliseconds, over which users are notified that Google Chrome must be relaunched or that a Google Chrome OS device must be restarted to apply a pending update. If not set, the default period of 604800000 milliseconds (one week) is used.",
+      "property_order": 75,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "integer"
+        }
+      ]
+    },
+    "ShowAppsShortcutInBookmarkBar": {
+      "title": "Show the apps shortcut in the bookmark bar",
+      "description": "Setting the policy to True displays the apps shortcut. Setting the policy to False means this shortcut never appears..",
+      "property_order": 80,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "boolean"
+        }
+      ]
+    },
+    "ExtensionInstallAllowlist": {
+      "title": "Extension Install Allow list",
+      "description": "Setting the policy specifies which extensions are not subject to the blocklist. A blocklist value of * means all extensions are blocked and users can only install extensions listed in the allow list. The extension ID needs to be added i.e inoeonmfapjbbkmdafoankkfajkcphgd",
+      "property_order": 85,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "Extension"
+          }
+        }
+      ]
+    },
+    "ExtensionInstallBlocklist": {
+      "title": "Extension Install Block list",
+      "description": "Allows you to specify which extensions the users can NOT install. Extensions already installed will be disabled if blocked, without a way for the user to enable them. Once an extension disabled due to the blocklist is removed from it, it will automatically get re-enabled. The extension ID needs to be added i.e inoeonmfapjbbkmdafoankkfajkcphgd",
+      "property_order": 90,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "Extension"
+          }
+        }
+      ]
+    },
+    "ExtensionInstallForcelist": {
+      "title": "Extension Install Force list",
+      "description": "Setting the policy specifies a list of apps and extensions that install silently, without user interaction, and which users can't uninstall or turn off. Permissions are granted implicitly, including for the enterprise.deviceAttributes and enterprise.platformKeys extension APIs. If no extension needs to be on the force list a * needs to be added as the only item. The extension ID needs to be added i.e inoeonmfapjbbkmdafoankkfajkcphgd and ;https://clients2.google.com/service/update2/crx. The complete string will be eg. glnpjglilkicbckjpbgcfkogebgllemb;https://clients2.google.com/service/update2/crx",
+      "property_order": 95,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "Extension"
+          }
+        }
+      ]
+    },
+    "RestrictSigninToPattern": {
+      "title": "Restrict Signin To Pattern",
+      "description": "Contains a regular expression which is used to determine which Google accounts can be set as browser primary accounts in Google Chrome (i.e. the account that is chosen during the Sync opt-in flow). Value e.g: .*@example.com, *@(example.com|example2.com)",
+      "property_order": 100,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Domain",
+          "type": "string"
+        }
+      ]
+    },
+    "IncognitoModeAvailability": {
+      "title": "Incognito mode availability",
+      "description": "Specifies whether the user may open pages in Incognito mode in Google Chrome. 0 = Incognito mode available 1 = Incognito mode disabled 2 = Incognito mode forced",
+      "property_order": 105,
+      "anyOf": [
+        {
+          "type": "null",
+          "title": "Not Configured"
+        },
+        {
+          "title": "Configured",
+          "type": "integer"
+        }
+      ]
+    }
+  }
+}
