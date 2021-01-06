@@ -1,5 +1,5 @@
 # Custom Schema for JamfPro External Applications
-Custom Schema that can be added into JamfPro to manage Google Chrome Settings across your environment. This will add settings that can be configured to manage settings in the browser.
+Custom Schema that can be added into JamfPro to manage setting for applications such as Google Chrome Settings across your environment. This will add settings that can be configured to manage settings in the browser.
 
 ## Getting Started
 1. Create a new Configuration Profile
@@ -15,16 +15,16 @@ Custom Schema that can be added into JamfPro to manage Google Chrome Settings ac
 
 4. Add the Application & Custom Settings payload and select External Applications and click Add
   -  **Source** - Custom Schema 
-  - **Preference Domain** - com.google.chrome
+  - **Preference Domain** - i.e com.google.chrome
   - **Custom Schema** - Paste in the Custom Schema
   
- 5. Scroll down and find all the settings from the custom schema. From here you will need to select what settings you and your organisation would want applied to Google Chrome. 
+ 5. Scroll down and find all the settings from the custom schema. From here you will need to select what settings you and your organisation would want apply.
  
  Once **Save** has been clcked this will be applied to all devices in scope.
  
- 6. In Google Chrome navigate to **chrome://policy/**. Here you will find all the settings that have been applied to Google Chrome
+ 6. To test the settings in Google Chrome navigate to **chrome://policy/**. Here you will find all the settings that have been applied to Google Chrome
 
 ## Prerequisites
-Google Chrome needs to be installed on the endpoint. This can be done via a policy using this script. 
+The application needs to be pre installed on the endpoint. As Google Chrome has been used in this example, the install can be done via a policy using this script [Link](https://github.com/tajinderchana/JamfPro-Custom-Schema/raw/main/DownloadChrome.sh). 
 
 It would be recomended that auto updates are enabled for Google Chrome by running this script [Link](https://github.com/hjuutilainen/adminscripts/raw/master/chrome-enable-autoupdates.py)
