@@ -11,7 +11,7 @@ Custom Schema that can be added into JamfPro to manage setting for applications 
   - Distribution Method
   - Level
   
-3. Set the scope for whos this profile will be applied to
+3. Set the scope for whos this profile will be applied to.
 
 4. Add the Application & Custom Settings payload and select External Applications and click Add
   -  **Source** - Custom Schema 
@@ -22,9 +22,9 @@ Custom Schema that can be added into JamfPro to manage setting for applications 
  
  Once **Save** has been clcked this will be applied to all devices in scope.
  
- 6. To test the settings in Google Chrome navigate to **chrome://policy/**. Here you will find all the settings that have been applied to Google Chrome
+ 6. To test the settings in Google Chrome navigate to **chrome://policy/**. Here you will find all the settings that have been applied to Google Chrome.
 
 ## Prerequisites
 The application needs to be pre installed on the endpoint. As Google Chrome has been used in this example, the install can be done via a policy using this script [Link](https://github.com/tajinderchana/JamfPro-Custom-Schema/raw/main/DownloadChrome.sh). 
 
-It would be recomended that auto updates are enabled for Google Chrome by running this script [Link](https://github.com/hjuutilainen/adminscripts/raw/master/chrome-enable-autoupdates.py)
+It would be recomended that auto updates are enabled for Google Chrome by running this script [Link](https://github.com/hjuutilainen/adminscripts/raw/master/chrome-enable-autoupdates.py).
