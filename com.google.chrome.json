@@ -330,6 +330,24 @@
         }
       ]
     },
+     "ManagedBookmarks": {
+      "title": "Work Bookmarks",
+      "type": "array",
+      "items": {
+        "id": "BookmarkType",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "url": {
+            "type": "string",
+            "title": "URL"
+          }
+        }
+      }
+    },
     "IncognitoModeAvailability": {
       "title": "Incognito mode availability",
       "description": "Specifies whether the user may open pages in Incognito mode in Google Chrome. 0 = Incognito mode available 1 = Incognito mode disabled 2 = Incognito mode forced",
